@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: papayawhip;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: teal;
+            font-weight: 666;
+            margin-bottom: 0.25rem;
+        }
+
+        canvas {
+            border: 20px solid teal;
+            width: 800px;
+            height: 500px;
+            background: white;
+        }
+
+        button {
+            background-color: teal;
+            border: 0;
+            color: #fff;
+            font-size: 1.25rem;
+            padding: 0.5rem 2rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="canvasWrap">
+        <h1>Draw with your arrow keys</h1>
+        <canvas width="1600" height="1000" id="sketch"></canvas>
+        <div>
+            <button id="clear">Clear the &lt;canvas&gt;</button>
+        </div>
+    </div>
+    <script src="./sketch.js"></script>
+</body>
+
+</html>
