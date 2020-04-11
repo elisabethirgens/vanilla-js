@@ -68,18 +68,25 @@ function draw({ key }) {
 }
 
 // Declare a function to handle keys
-function handleKey(e) {
-    if (e.key.includes('Arrow')) {
-        e.preventDefault();
-        draw({ key: e.key });
+function handleKey(e) { // e for event (but could be named whatever)
+    if (e.key.includes('Arrow')) { // array method to return a boolean
+        e.preventDefault(); // tell user agent to not scroll with arrow keys
+        draw({ key: e.key }); // call the draw function and pass object as an argument
     }
 }
+// includes() will return true for ArrowUp, ArrowRight, ArrowDown, ArrowLeft
+// find other event keycodes on https://keycode.info/
 
 // Declare a function to clear the canvas
 function clearCanvas() {
     ctx.clearRect(0, 0, width, height);
 }
 
-// Listen for arrow keys
+// The method addEventListener() will set up a function that is called when the target
+//   receives a specific event (keyboard, mouse + a whole bunch more categories)
+// SYNTAX: target.addEventListener(type, listener [, options]);
 window.addEventListener('keydown', handleKey);
 clearButton.addEventListener('click', clearCanvas);
+
+// Those targets were the global Window or the element stored in clearButton,
+//   and the listeners are the objects that will receive notifications.
