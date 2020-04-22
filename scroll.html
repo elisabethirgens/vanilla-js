@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+</head>
+
+<body>
+    <h1>Scroll to activate cupcake</h1>
+    <div class="wrapper">
+        <div class="cupcake-ipsum">
+            <p>Cupcake ipsum dolor sit amet chocolate bar chupa chups tart tart. Tiramisu lollipop oat cake pastry icing
+                donut danish toffee. Cake toffee cupcake chupa chups lemon drops macaroon bonbon dragée cookie. Gummies
+                gummies croissant pastry gummies pastry cheesecake tart. Marzipan dragée jelly cake tart ice cream sugar
+                plum caramels candy canes. Cake biscuit jelly gummies jelly bonbon liquorice. Jelly beans toffee
+                gingerbread pudding icing jujubes. Cheesecake chocolate sesame snaps dragée. Sesame snaps danish danish
+                pastry gingerbread pie powder. Chocolate sweet tootsie roll pie biscuit danish cotton candy. Icing
+                cotton candy jujubes apple pie. Croissant cake ice cream. Chupa chups dessert chocolate cake. Fruitcake
+                oat cake donut donut.</p>
+            <p>Tiramisu cotton candy lollipop sugar plum pie. Gummies cake cotton candy icing. Marshmallow dessert sweet
+                sweet roll lollipop jelly-o lollipop liquorice sweet roll. Carrot cake lemon drops candy canes. Pie
+                marshmallow cupcake cake cookie topping danish brownie muffin. Icing apple pie donut biscuit jelly-o.
+                Chocolate bar tart sweet roll ice cream sweet roll. Pudding sweet bonbon tootsie roll brownie. Candy
+                canes jelly-o jelly marshmallow jelly-o bonbon apple pie cotton candy. Sweet roll pie sweet roll candy
+                carrot cake donut jelly beans. Lemon drops cookie carrot cake cookie macaroon toffee oat cake dragée
+                chocolate bar. Muffin sweet carrot cake brownie toffee bonbon cheesecake bonbon biscuit.
+            </p>
+            <p>Marshmallow gummies jujubes croissant gummies. Bonbon danish powder tootsie roll wafer carrot cake. Pie
+                chocolate bar sesame snaps gummi bears candy canes danish cake. Cookie cake chocolate bar cookie brownie
+                donut dragée pie. Toffee brownie chupa chups. Pie tiramisu jelly-o candy canes danish muffin. Cheesecake
+                wafer halvah icing croissant. Icing apple pie biscuit icing jelly sweet. Chocolate bar marzipan bonbon
+                cookie dragée marzipan. Toffee sugar plum powder gingerbread oat cake. Marzipan halvah cake. Pudding
+                wafer chocolate. Pudding cheesecake topping sesame snaps.
+            </p>
+            <p>Next paragraph is the <strong>lastElementChild</strong> that will make the cupcake yours to keep (also if
+                you scroll more, but not after a refresh!)
+            </p>
+            <p>Enjoy!</p>
+        </div>
+        <div class="peek-a-boo hidden">🧁</div>
+    </div>
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: blanchedalmond;
+            color: gray;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .wrapper {
+            width: 35rem;
+            height: 40rem;
+            margin: 0 auto;
+            background: white;
+            border: 8px solid white;
+            display: grid;
+            grid-template-rows: 1fr auto;
+        }
+
+        .peek-a-boo {
+            background: turquoise;
+            text-align: center;
+            font-size: 10rem;
+        }
+
+        .peek-a-boo.hidden {
+            opacity: 0.1;
+        }
+
+        .cupcake-ipsum {
+            overflow-y: scroll;
+            padding: 1rem 2rem;
+        }
+
+        p:last-child {
+            font-style: italic;
+            margin-top: 2rem;
+        }
+    </style>
+    <script src="./scroll.js"></script>
+</body>
+
+</html>
