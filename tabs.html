@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          sans-serif;
+        background: blanchedalmond;
+      }
+      .tabs {
+        max-width: 50rem;
+        margin: 4rem auto;
+        padding: 2rem;
+      }
+      .tablist {
+        display: flex;
+      }
+      [role='tabpanel'] {
+        background: #fff;
+        padding: 5rem 2rem;
+      }
+      button[role='tab'] {
+        background: gainsboro;
+        font-size: 1.5rem;
+        padding: 0.5rem 2rem;
+        border: 0;
+        border-top: 5px solid gainsboro;
+        cursor: pointer;
+      }
+
+      button[aria-selected='true'] {
+        background: #fff;
+        border-top: 5px solid teal;
+        outline: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tabs">
+      <div role="tablist" aria-label="Programming Languages">
+        <button role="tab" aria-selected="true" id="01">First 🍏</button>
+        <button role="tab" aria-selected="false" id="02">Second 🍒</button>
+        <button role="tab" aria-selected="false" id="03">Third 🍋</button>
+      </div>
+      <div role="tabpanel" aria-labelledby="01">
+        Hey! Here’s a panel without an initial hidden attribute in the HTML.
+      </div>
+      <div role="tabpanel" aria-labelledby="02" hidden>
+        <em>Did I hear an eventlistener…?</em>
+      </div>
+      <div role="tabpanel" aria-labelledby="03" hidden>
+        Let’s look at lemons now!
+      </div>
+    </div>
+    <script src="./tabs.js"></script>
+  </body>
+</html>
