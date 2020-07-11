@@ -2,6 +2,8 @@ const video = document.querySelector('.webcam');
 const canvas = document.querySelector('.video');
 const ctx = canvas.getContext('2d');
 const faceCanvas = document.querySelector('.face');
+const faceCtx = faceCanvas.getContext('2d');
+const PIXELS = 14;
 
 const faceDetector = new window.FaceDetector({
     fastMode: true,
@@ -21,8 +23,8 @@ async function populateVideo() {
 
 async function detect() {
     const faces = await faceDetector.detect(video);
-    // eslint-disable-next-line no-use-before-define
     faces.forEach(drawFace);
+    faces.forEach(censorFace);
     requestAnimationFrame(detect);
 }
 
@@ -32,6 +34,23 @@ function drawFace(face) {
     ctx.strokeStyle = 'hotpink';
     ctx.lineWidth = 5;
     ctx.strokeRect(left, top, width, height);
+}
+
+function censorFace({ boundingBox: face }) {
+    faceCtx.imageSmoothingEnabled = false;
+    faceCtx.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
+    faceCtx.drawImage(
+        // source image parameters
+        video, face.x, face.y, face.width, face.height,
+        // destination canvas parameters
+        face.x, face.y, PIXELS, PIXELS
+    );
+    faceCtx.drawImage(
+        // source image parameters
+        faceCanvas, face.x, face.y, PIXELS, PIXELS,
+        // destination canvas parameters
+        face.x, face.y, face.width, face.height
+    )
 }
 
 populateVideo().then(detect);
