@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Generator</title>
+    <style>
+      body {
+        background: blanchedalmond;
+        font-family: sans-serif;
+      }
+
+      .wrapper {
+        margin: 5rem auto;
+        max-width: 40rem;
+      }
+
+      .text {
+        border: 3px solid gainsboro;
+        caret-color: hotpink;
+        padding: 0.5rem;
+        font-size: 1.25rem;
+      }
+
+      .text:focus {
+        outline: 1px solid hotpink;
+        border: 3px solid hotpink;
+      }
+
+      .options {
+        margin: 2rem 0;
+        display: flex;
+      }
+
+      .options > label {
+        margin-right: 1rem;
+        background-color: gainsboro;
+        padding: 0.9rem 1.25rem 0.8rem 0.75rem;
+      }
+
+      .result {
+        background-color: gainsboro;
+        padding: 1rem;
+        min-height: 10rem;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: #666;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <textarea class="text" autofocus rows="8" cols="50">This fantastic text generator can transform any text you put here into something less useful.</textarea>
+      <div class="options">
+        <label for="1">
+          <input id="1" type="radio" name="filter" value="annoying" />
+          Pretty annoying
+        </label>
+        <label for="2">
+          <input id="2" type="radio" name="filter" value="norwegian" />
+          Not at all Norwegian
+        </label>
+        <label for="3">
+          <input id="3" type="radio" name="filter" value="happy" />
+          Super happy
+        </label>
+      </div>
+      <div class="result"></div>
+    </div>
+
+    <script src="textgenerator.js"></script>
+  </body>
+</html>
