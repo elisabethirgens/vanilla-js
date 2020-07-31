@@ -4,6 +4,14 @@ Here are some of my exercises from Wes Bos’ [Beginner JavaScript](https://begi
 
 Overview of [modules in the course](https://beginnerjavascript.com#videos)
 
+## Linting
+
+```
+npx eslint .
+```
+
+---
+
 ## Exercise 55: Face Detection 🥰
 
 Works when running a server, and in Chrome with the experimental features flag turned on to enable using The Shape Detection API.

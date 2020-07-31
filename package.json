@@ -1,0 +1,7 @@
+{
+  "name": "my-vanilla-js-exercises",
+  "version": "1.0.0",
+  "devDependencies": {
+    "eslint": "^7.5.0"
+  }
+}
