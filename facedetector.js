@@ -50,7 +50,7 @@ function censorFace({ boundingBox: face }) {
         faceCanvas, face.x, face.y, PIXELS, PIXELS,
         // destination canvas parameters
         face.x, face.y, face.width, face.height
-    )
+    );
 }
 
 populateVideo().then(detect);

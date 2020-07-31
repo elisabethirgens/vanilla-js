@@ -24,7 +24,7 @@ const obsOptions = {
   root: ipsum, // Set a parent element to use as viewport
   // Define levels of visibility for when the callback should run
   threshold: 1,
-}
+};
 
 // Create the intersection observer by calling its constructor
 //   and passing it my callback function and my options
