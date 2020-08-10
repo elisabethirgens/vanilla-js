@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Face Detector</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrap">
-        <video class="webcam"></video>
-        <canvas class="video"></canvas>
-        <canvas class="face"></canvas>
+      <video class="webcam"></video>
+      <canvas class="video"></canvas>
+      <canvas class="face"></canvas>
     </div>
 
     <style>
-        body {
-            background: blanchedalmond;
-        }
-        .wrap {
-            position: relative;
-            padding: 3rem;
-            display: grid;
-        }
-        .wrap > * {
-            grid-column: 1;
-            grid-row: 1;
-        }
-        .face {
-            position: absolute;
-        }
+      body {
+        background: blanchedalmond;
+      }
+
+      .wrap {
+        position: relative;
+        padding: 3rem;
+        display: grid;
+      }
+
+      .wrap > * {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .face {
+        position: absolute;
+      }
     </style>
     <script src="facedetector.js"></script>
-</body>
+  </body>
 </html>

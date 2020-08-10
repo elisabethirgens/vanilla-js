@@ -41,15 +41,29 @@ function censorFace({ boundingBox: face }) {
     faceCtx.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
     faceCtx.drawImage(
         // source image parameters
-        video, face.x, face.y, face.width, face.height,
+        video,
+        face.x,
+        face.y,
+        face.width,
+        face.height,
         // destination canvas parameters
-        face.x, face.y, PIXELS, PIXELS
+        face.x,
+        face.y,
+        PIXELS,
+        PIXELS
     );
     faceCtx.drawImage(
         // source image parameters
-        faceCanvas, face.x, face.y, PIXELS, PIXELS,
+        faceCanvas,
+        face.x,
+        face.y,
+        PIXELS,
+        PIXELS,
         // destination canvas parameters
-        face.x, face.y, face.width, face.height
+        face.x,
+        face.y,
+        face.width,
+        face.height
     );
 }
 

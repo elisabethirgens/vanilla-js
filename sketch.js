@@ -3,7 +3,7 @@ const myCanvas = document.querySelector('#sketch');
 const clearButton = document.querySelector('#clear');
 
 // Use a method for HTMLCanvasElement to return a drawing context
-const ctx = myCanvas.getContext('2d'); 
+const ctx = myCanvas.getContext('2d');
 
 // Declare a constant with number of pixels for each key stroke
 // (some naming conventions will UPPERCASE a const with a value)
@@ -22,12 +22,12 @@ ctx.strokeStyle = `hsl(${colourHue}, 100%, 40%)`;
 // We need to store the w/h and could do this:
 //   const width = myCanvas.width;
 //   const height = myCanvas.height;
-// but we can also deconstruct when const naming comes from 
+// but we can also deconstruct when const naming comes from
 //   the properties of the canvas element itself:
 //   HTMLCanvasElement.width and HTMLCanvasElement.height
 const { width, height } = myCanvas;
 
-// Use standard built-in object Math 
+// Use standard built-in object Math
 // with it’s methods random() and floor()
 let x = Math.floor(Math.random() * width);
 let y = Math.floor(Math.random() * height);
@@ -68,8 +68,10 @@ function draw({ key }) {
 }
 
 // Declare a function to handle keys
-function handleKey(e) { // e for event (but could be named whatever)
-    if (e.key.includes('Arrow')) { // array method to return a boolean
+function handleKey(e) {
+    // e for event (but could be named whatever)
+    if (e.key.includes('Arrow')) {
+        // array method to return a boolean
         e.preventDefault(); // tell user agent to not scroll with arrow keys
         draw({ key: e.key }); // call the draw function and pass object as an argument
     }
