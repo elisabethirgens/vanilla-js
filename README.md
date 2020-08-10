@@ -10,6 +10,12 @@ Overview of [modules in the course](https://beginnerjavascript.com#videos)
 npx eslint .
 ```
 
+## Formatting
+
+```
+npx prettier --check .
+```
+
 ---
 
 ## Exercise 55: Face Detection 🥰

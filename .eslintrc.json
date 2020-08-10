@@ -7,8 +7,5 @@
   "parserOptions": {
     "ecmaVersion": 11
   },
-  "rules": {
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"]
-  }
+  "rules": {}
 }
