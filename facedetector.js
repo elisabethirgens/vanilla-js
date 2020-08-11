@@ -1,8 +1,8 @@
-const video = document.querySelector('.webcam');
-const canvas = document.querySelector('.video');
-const ctx = canvas.getContext('2d');
-const faceCanvas = document.querySelector('.face');
-const faceCtx = faceCanvas.getContext('2d');
+const video = document.querySelector(".webcam");
+const canvas = document.querySelector(".video");
+const ctx = canvas.getContext("2d");
+const faceCanvas = document.querySelector(".face");
+const faceCtx = faceCanvas.getContext("2d");
 const PIXELS = 14;
 
 const faceDetector = new window.FaceDetector({
@@ -31,7 +31,7 @@ async function detect() {
 function drawFace(face) {
     const { width, height, top, left } = face.boundingBox;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.strokeStyle = 'hotpink';
+    ctx.strokeStyle = "hotpink";
     ctx.lineWidth = 5;
     ctx.strokeRect(left, top, width, height);
 }

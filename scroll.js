@@ -1,6 +1,6 @@
 // Grab some elements and store them in constants
-const ipsum = document.querySelector('.cupcake-ipsum');
-const theCupcake = document.querySelector('.peek-a-boo');
+const ipsum = document.querySelector(".cupcake-ipsum");
+const theCupcake = document.querySelector(".peek-a-boo");
 
 /*
 Use the Intersection Observer API to configure a callback function
@@ -14,7 +14,7 @@ function obsCallback(paragraphs) {
     // When should this function do it’s thing?
     // Check for when we’ve got a full intersection ratio
     if (paragraphs[0].intersectionRatio === 1) {
-        theCupcake.classList.remove('hidden');
+        theCupcake.classList.remove("hidden");
         myLookout.unobserve(ipsum.lastElementChild);
     }
 }

@@ -14,10 +14,10 @@ function handleTabClick(event) {
     });
     // Hide all panels! Set all buttons to aria-selected="false"!
     tabButtons.forEach((tab) => {
-        tab.setAttribute('aria-selected', false);
+        tab.setAttribute("aria-selected", false);
     });
     // and then flip it for the element to which the event handler is attatched
-    event.currentTarget.setAttribute('aria-selected', true);
+    event.currentTarget.setAttribute("aria-selected", true);
 
     // Destructuring of `const id = event.currentTarget.id;`
     // will make a variable named id (and could do others in the same line!)
@@ -26,7 +26,7 @@ function handleTabClick(event) {
     // Use the find() method to return the first element in the tabPanels array
     // that satisfies the provided testing function ("does the id match?")
     const showTabPanel = tabPanels.find(
-        (panel) => panel.getAttribute('aria-labelledby') === id
+        (panel) => panel.getAttribute("aria-labelledby") === id
     );
     showTabPanel.hidden = false;
 }
@@ -34,5 +34,5 @@ function handleTabClick(event) {
 // Execute a function (listen for a click event and run handleTabClick)
 // for each element in the NodeList that is tabButtons
 tabButtons.forEach((button) =>
-    button.addEventListener('click', handleTabClick)
+    button.addEventListener("click", handleTabClick)
 );

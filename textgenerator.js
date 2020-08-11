@@ -1,13 +1,13 @@
-const textarea = document.querySelector('.text');
-const result = document.querySelector('.result');
+const textarea = document.querySelector(".text");
+const result = document.querySelector(".result");
 const filterOptions = Array.from(document.querySelectorAll('[name="filter"]'));
 
 const norwegianDictionary = {
-    a: 'å',
-    A: 'Æ',
-    e: 'æ',
-    o: 'ø',
-    O: 'Ø',
+    a: "å",
+    A: "Æ",
+    e: "æ",
+    o: "ø",
+    O: "Ø",
 };
 
 const filters = {
@@ -25,11 +25,11 @@ const filters = {
     },
     happy(char) {
         const random = Math.floor(Math.random() * 4);
-        if (char === ' ' && random === 2) {
-            return ' 😊 ';
+        if (char === " " && random === 2) {
+            return " 😊 ";
         }
-        if (char === ' ' && random === 3) {
-            return ' 😀 ';
+        if (char === " " && random === 3) {
+            return " 😀 ";
         }
         return char;
     },
@@ -39,15 +39,15 @@ function transformText(text) {
     const filter = filterOptions.find((input) => input.checked).value;
     // property lookup with [] because variable
     const modifiedText = Array.from(text).map(filters[filter]);
-    result.textContent = modifiedText.join('');
+    result.textContent = modifiedText.join("");
 }
 
-textarea.addEventListener('input', (event) =>
+textarea.addEventListener("input", (event) =>
     transformText(event.target.value)
 );
 
 filterOptions.forEach((input) =>
-    input.addEventListener('input', () => {
+    input.addEventListener("input", () => {
         transformText(textarea.value);
     })
 );

@@ -1,5 +1,5 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: seashell;
   text-align: center;
   color: crimson;
@@ -57,7 +57,7 @@ button {
 
 .character {
   font-size: 10rem;
-  font-family: 'KaiTi', '楷体', STKaiti, '华文楷体', serif;
+  font-family: "KaiTi", "楷体", STKaiti, "华文楷体", serif;
   margin-bottom: 1rem;
 }
 
