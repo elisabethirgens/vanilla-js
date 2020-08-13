@@ -1,8 +1,6 @@
 # Vanilla JS 🍦
 
-Here are some of my exercises from Wes Bos’ [Beginner JavaScript](https://beginnerjavascript.com/) course and I am totally calling this repo vanilla instead of beginner because that makes me feel better.
-
-Overview of [modules in the course](https://beginnerjavascript.com#videos)
+These are my refactored exercises from Wes Bos’ [Beginner JavaScript](https://beginnerjavascript.com/) course, and I am totally calling this repo **vanilla** instead of beginner because that makes me feel better. Overview of [all modules in the course](https://beginnerjavascript.com#videos)!
 
 ## Linting
 
@@ -18,6 +16,10 @@ npx prettier --check .
 
 ---
 
-## Exercise 55: Face Detection 🥰
-
-Works when running a server, and in Chrome with the experimental features flag turned on to enable using The Shape Detection API.
+- Ex33: Sketch — draw with arrow keys on <canvas> 🌈
+- Ex34: Modal — I made flash cards to practice Chinese numerals 🇨🇳
+- Ex35: Scroll — activate 🧁 with Events and Intersection Observer
+- Ex36: Tabs — more event listener and array methods to create tab panels 🍋
+- Ex55: Face detector — works when running a server, and in Chrome with the experimental features flag turned on to enable using The Shape Detection API 😎
+- Ex56: Text generator — gather methods to look them up on the object 🇳🇴
+- Ex59: Slider — with a closure to enable multiple sliders on same page 🍪
