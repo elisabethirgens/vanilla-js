@@ -12,23 +12,39 @@
       <canvas class="video"></canvas>
       <canvas class="face"></canvas>
     </div>
+    <div>
+      <label for="pixelation">Pixelation</label>
+      <input name="pixelation" type="range" value="14" min="4" max="80" />
+    </div>
+    <div>
+      <ul>
+        <li>
+          Use Chrome to play with the The Shape Detection API
+        </li>
+        <li>
+          Enable chrome://flags#enable-experimental-web-platform-features
+        </li>
+        <li>
+          Allow this page to use the camera when it asks permission
+        </li>
+      </ul>
+    </div>
 
     <style>
       body {
         background: blanchedalmond;
+        font-family: "Monaco", monospace;
+        padding: 4rem;
       }
-
       .wrap {
         position: relative;
-        padding: 3rem;
         display: grid;
+        margin-bottom: 2rem;
       }
-
       .wrap > * {
         grid-column: 1;
         grid-row: 1;
       }
-
       .face {
         position: absolute;
       }

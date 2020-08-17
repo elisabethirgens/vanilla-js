@@ -3,7 +3,12 @@ const canvas = document.querySelector(".video");
 const ctx = canvas.getContext("2d");
 const faceCanvas = document.querySelector(".face");
 const faceCtx = faceCanvas.getContext("2d");
-const PIXELS = 14;
+
+let PIXELS = 14;
+const slider = document.querySelector("[name=pixelation]");
+slider.addEventListener("input", (e) => {
+    PIXELS = e.currentTarget.value;
+});
 
 const faceDetector = new window.FaceDetector({
     fastMode: true,
