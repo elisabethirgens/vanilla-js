@@ -14,11 +14,14 @@ const faceDetector = new window.FaceDetector({
     fastMode: true,
 });
 
+// Declaring a function with the async keyword will let
+// me use the await keyword within that function
 async function populateVideo() {
     const stream = await navigator.mediaDevices.getUserMedia({
         video: { width: 1280, height: 720 },
     });
     video.srcObject = stream;
+    // Pause execution of this function until Promise is settled
     await video.play();
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
@@ -39,8 +42,10 @@ function drawFace(face) {
     ctx.strokeStyle = "hotpink";
     ctx.lineWidth = 5;
     ctx.strokeRect(left, top, width, height);
+    // console.log({ left, top, width, height });
 }
 
+// Destructure the face.boundingBox property and rename it for this function
 function censorFace({ boundingBox: face }) {
     faceCtx.imageSmoothingEnabled = false;
     faceCtx.clearRect(0, 0, faceCanvas.width, faceCanvas.height);
@@ -72,4 +77,6 @@ function censorFace({ boundingBox: face }) {
     );
 }
 
+// then() is a method that will return a Promise
+// and takes a callback function as an argument
 populateVideo().then(detect);
