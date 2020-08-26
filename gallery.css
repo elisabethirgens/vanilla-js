@@ -1,0 +1,89 @@
+body {
+  background-color: papayawhip;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Ubuntu, sans-serif;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+h1 {
+  margin-left: 2.5rem;
+  color: firebrick;
+  font-size: 3rem;
+}
+
+h1 span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.galleries {
+  border-top: 2px solid white;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border-bottom: 2px solid white;
+}
+
+.gallery img {
+  max-width: 120px;
+  margin: 0.5rem;
+}
+
+.modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.modal-inner {
+  background: white;
+  transform: translateY(-100vh);
+  transition: all 0.5s;
+  display: grid;
+  grid-template-columns: 4rem 1fr 4rem;
+  margin: 3rem;
+}
+
+.modal.open .modal-inner {
+  transform: translateY(0);
+}
+
+.modal button {
+  font-size: 3rem;
+  background-color: white;
+  color: #aaa;
+  border: none;
+}
+
+.modal button:hover {
+  background-color: #eee;
+}
+
+.modal img {
+  padding: 2rem 0;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal figcaption {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}

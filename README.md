@@ -23,4 +23,5 @@ npx prettier --check .
 - Ex55: Face detector — works when running a server, and in Chrome with the experimental features flag turned on to enable using The Shape Detection API 😎
 - Ex56: Text generator — gather methods to look them up on the object 🇳🇴
 - Ex57: Shopping list — custom events, delegation and local storage 📝
+- Ex58: Gallery — with a reusable script for separate galleries 🎭
 - Ex59: Slider — with a closure to enable multiple sliders on same page 🍪
